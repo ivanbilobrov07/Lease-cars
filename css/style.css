@@ -487,7 +487,79 @@ main {
   line-height: 1.3;
 }
 
-/* =================== Footer =================== */
+/* =================== Choose =================== */
+
+.choose {
+  padding-top: 100px;
+}
+
+.tabs {
+  margin-bottom: 70px;
+}
+
+.tabs-btn {
+  margin-bottom: 100px;
+}
+
+.tabs-btn-item {
+  border: none;
+  padding: 0;
+
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.tabs-btn-item.active {
+  color: var(--accent-color);
+}
+
+.tabs-content-item {
+  display: none;
+}
+
+.tabs-content-item.active {
+  display: grid;
+  grid-template-columns: repeat(1, 270px);
+  gap: 10px 40px;
+}
+
+.card {
+  text-align: center;
+}
+
+.cart-thumb {
+  padding: 20px 5px 0;
+  border: 1px solid var(--accent-color);
+  border-top: 0;
+}
+
+.card-title {
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
+
+.card-price {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.card-link {
+  display: block;
+  padding: 0 5px;
+  border: 1px solid var(--accent-color);
+  border-top: 0;
+
+  color: var(--accent-color);
+}
 
 @media screen and (max-width: 767px) {
   /* =================== Header =================== */
@@ -594,6 +666,19 @@ main {
   .blog-item-link {
     margin-left: auto;
   }
+  /* =================== Choose =================== */
+
+  .tabs-btn-item {
+    display: block;
+    margin: 0 auto;
+  }
+  .tabs-btn-item + .tabs-btn-item {
+    margin-top: 50px;
+  }
+  .tabs-content-item.active {
+    width: 270px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 428px) {
@@ -665,6 +750,9 @@ main {
     text-transform: uppercase;
     color: var(--white-color);
     font-weight: 400;
+  }
+  .menu-list-link--active {
+    color: var(--accent-color);
   }
 
   /* =================== Hero =================== */
@@ -766,6 +854,22 @@ main {
   .contacts-input {
     width: 270px;
   }
+  /* =================== Choose =================== */
+
+  .tabs-btn {
+    display: flex;
+    gap: 0 47px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tabs-content-item.active {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    gap: 10px 40px;
+    width: 580px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -846,5 +950,18 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-bottom: 70px;
+  }
+
+  /* =================== Choose =================== */
+
+  .tabs-btn {
+    gap: 0 80px;
+  }
+
+  .tabs-content-item.active {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 40px;
+    width: 100%;
   }
 }
